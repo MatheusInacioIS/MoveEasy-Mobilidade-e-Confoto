@@ -134,7 +134,7 @@ Este projeto foi desenvolvido para fins acadêmicos e educacionais.
 
 ### Luiz Enrique Silva
 
-📧 [luizenriquesilva47@gmail.com](mailto:luizenriquesilva47@gmail.com)
+📧 [matheusinaciio16@gmail.com](mailto:matheusinaciio16@gmail.com)
 
 ---
 
