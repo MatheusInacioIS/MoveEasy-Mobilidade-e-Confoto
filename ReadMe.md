@@ -132,7 +132,7 @@ Este projeto foi desenvolvido para fins acadêmicos e educacionais.
 
 # 📬 Contato
 
-### Luiz Enrique Silva
+### Matheus Inacio da Silva
 
 📧 [matheusinaciio16@gmail.com](mailto:matheusinaciio16@gmail.com)
 
