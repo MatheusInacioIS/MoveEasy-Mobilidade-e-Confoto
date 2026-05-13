@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | MOVEASY</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo-moveasy.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="index.html">MOVEASY</a>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="linhas.html">Linhas</a>
+      <a href="mapa-real.html">Mapa</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="sobre.html">Projeto</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+    <div id="profileArea" class="profile-area"></div>
+  </header>
+
+  <main>
+
+
+
+    <section class="login-page">
+      <div class="login-card">
+        <span class="tag">Conta MOVEASY</span>
+        <h1>Entrar no sistema</h1>
+        <p>Entre com nome/e-mail ou use login Google.</p>
+
+        <label>Nome</label>
+        <input id="manualName" type="text" placeholder="Seu nome completo">
+
+        <label>E-mail</label>
+        <input id="manualEmail" type="email" placeholder="seuemail@gmail.com">
+
+        <button class="btn full login-main-btn" onclick="manualLogin()">Entrar com nome e e-mail</button>
+
+        <div class="divider">ou</div>
+
+        <div id="googleLoginButton"></div>
+
+        <p id="loginMessage" class="success-msg"></p>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <footer class="footer">
+    <p><strong>Criadores:</strong> Luiz Enrique Silva dos Santos, Kayk Ferreira Candido e Matheus Inacio da Silva</p>
+    <p>Projeto acadêmico de UX/UI inspirado em aplicativos de mobilidade urbana.</p>
+  </footer>
+
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessibilidade | MOVEASY</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo-moveasy.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="index.html">MOVEASY</a>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="linhas.html">Linhas</a>
+      <a href="mapa-real.html">Mapa</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="sobre.html">Projeto</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+    <div id="profileArea" class="profile-area"></div>
+  </header>
+
+
+
+  <main>
+    <section class="section accessibility-page">
+      <span class="tag">Acessibilidade e preferências</span>
+      <h1>Central de Configurações</h1>
+      <p>Todas as configurações do site ficam reunidas aqui. Os ajustes são salvos no navegador e aplicados em todas as
+        páginas.</p>
+
+      <div class="settings-dashboard">
+
+        <article class="settings-card">
+          <h2>Tema e visual</h2>
+          <p>Altere a aparência principal do MOVEASY.</p>
+          <div class="settings-actions">
+            <button class="btn" onclick="toggleTheme()" id="themeButton" data-setting-btn="theme">Alternar tema</button>
+            <button class="btn btn-dark" onclick="toggleContrast()" id="contrastButton" data-setting-btn="contrast">Alto
+              contraste</button>
+            <button class="btn btn-dark" onclick="toggleCompactMode()" id="compactButton"
+              data-setting-btn="compact">Modo compacto</button>
+          </div>
+        </article>
+
+        <article class="settings-card">
+          <h2>Texto e leitura</h2>
+          <p>Personalize fonte, legibilidade e leitura visual.</p>
+          <div class="settings-actions">
+            <button class="btn" onclick="increaseFont()" id="increaseFontButton">Aumentar fonte</button>
+            <button class="btn btn-dark" onclick="decreaseFont()" id="decreaseFontButton">Diminuir fonte</button>
+            <button class="btn btn-dark" onclick="resetFont()" id="resetFontButton">Fonte padrão</button>
+            <button class="btn btn-dark" onclick="toggleDyslexiaMode()" id="dyslexiaButton"
+              data-setting-btn="dyslexia">Fonte acessível</button>
+            <button class="btn btn-dark" onclick="toggleReadingGuide()" id="readingButton"
+              data-setting-btn="reading">Guia de leitura</button>
+          </div>
+        </article>
+
+        <article class="settings-card">
+          <h2>Interação</h2>
+          <p>Melhore a navegação por botões e teclado.</p>
+          <div class="settings-actions">
+            <button class="btn" onclick="toggleBigButtons()" id="bigButtonsButton" data-setting-btn="bigbuttons">Botões
+              maiores</button>
+            <button class="btn btn-dark" onclick="toggleOrangeFocus()" id="focusButton" data-setting-btn="focus">Foco
+              destacado</button>
+            <button class="btn btn-dark" onclick="toggleMotion()" id="motionButton" data-setting-btn="motion">Reduzir
+              animações</button>
+          </div>
+        </article>
+
+        <article class="settings-card danger-settings">
+          <h2>Dados locais</h2>
+          <p>Limpa login, favoritos e preferências salvas no navegador.</p>
+          <div class="settings-actions">
+            <button class="btn danger-btn" onclick="clearUserData()">Limpar dados locais</button>
+          </div>
+        </article>
+
+      </div>
+
+      <div id="readingGuide" class="reading-guide"></div>
+    </section>
+  </main>
+
+
+
+  <footer class="footer">
+    <p><strong>Criadores:</strong> Luiz Enrique Silva dos Santos, Kayk Ferreira Candido e Matheus Inacio da Silva</p>
+    <p>Projeto acadêmico de UX/UI inspirado em aplicativos de mobilidade urbana.</p>
+  </footer>
+
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suporte | MOVEASY</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo-moveasy.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="index.html">MOVEASY</a>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="linhas.html">Linhas</a>
+      <a href="mapa-real.html">Mapa</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="sobre.html">Projeto</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+    <div id="profileArea" class="profile-area"></div>
+  </header>
+
+  <main>
+
+    <section class="support-page">
+      <div class="support-card">
+        <span class="tag">Atendimento</span>
+        <h1>Central de Suporte</h1>
+        <p>Envie uma solicitação simulada e receba confirmação na tela.</p>
+
+        <div class="form-grid">
+          <input id="supportName" placeholder="Nome">
+          <input id="supportEmail" placeholder="E-mail">
+        </div>
+
+        <select id="supportType">
+          <option>Problema com linha</option>
+          <option>Erro no mapa</option>
+          <option>Acessibilidade</option>
+          <option>Conta e login</option>
+        </select>
+
+        <textarea id="supportText" placeholder="Descreva seu problema"></textarea>
+
+        <button class="btn full" onclick="sendSupport()">Enviar pedido de ajuda</button>
+
+        <div id="supportResult" class="support-result"></div>
+
+        <h2>FAQ</h2>
+
+        <div class="faq-item">
+          <button onclick="toggleFAQ(this)">Como favoritar linhas?</button>
+          <p>Entre em Linhas e clique no botão Favoritar. O botão muda para Desfavoritar automaticamente.</p>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFAQ(this)">Como funciona o mapa?</button>
+          <p>O mapa é uma simulação visual de ônibus se movendo por ruas horizontais e verticais.</p>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFAQ(this)">O site salva meus dados?</button>
+          <p>Somente dados simulados no navegador usando localStorage, sem servidor real.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p><strong>Criadores:</strong> Luiz Enrique Silva dos Santos, Kayk Ferreira Candido e Matheus Inacio da Silva</p>
+    <p>Projeto acadêmico de UX/UI inspirado em aplicativos de mobilidade urbana.</p>
+  </footer>
+
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

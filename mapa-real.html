@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mapa Real | MOVEASY</title>
+
+    <link rel="icon" type="image/svg+xml" href="img/logo-moveasy.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mapa-real.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <a class="logo" href="index.html">MOVEASY</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="linhas.html">Linhas</a>
+            <a href="mapa-real.html">Mapa</a>
+            <a href="favoritos.html">Favoritos</a>
+            <a href="suporte.html">Suporte</a>
+            <a href="sobre.html">Projeto</a>
+            <a href="acessibilidade.html">Acessibilidade</a>
+        </nav>
+
+        <div id="profileArea" class="profile-area"></div>
+    </header>
+
+    <main class="real-map-page">
+
+        <section class="real-map-info">
+            <span class="tag">Google Maps</span>
+
+            <h1>Mapa real da cidade</h1>
+
+            <p>
+                Visualize sua localização atual, trânsito em tempo real
+                e ônibus simulados no mapa real.
+            </p>
+
+            <div class="real-map-buttons">
+                <button onclick="centralizarUsuario()">
+                    Minha localização
+                </button>
+
+                <button onclick="toggleTransito()">
+                    Trânsito
+                </button>
+            </div>
+        </section>
+
+        <section class="mapa-container">
+            <div id="map"></div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>
+            <strong>Criadores:</strong>
+            Luiz Enrique Silva dos Santos, Kayk Ferreira Candido e Matheus Inacio da Silva
+        </p>
+
+        <p>
+            Projeto acadêmico de UX/UI inspirado em aplicativos de mobilidade urbana.
+        </p>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="js/mapa-real.js"></script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvLp33B5ziqTZ977kWmXN-lotlmwqE9N0&callback=initMap">
+        </script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+
+</html>

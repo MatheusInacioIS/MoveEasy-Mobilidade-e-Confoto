@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto | MOVEASY</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo-moveasy.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="index.html">MOVEASY</a>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="linhas.html">Linhas</a>
+      <a href="mapa-real.html">Mapa</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="sobre.html">Projeto</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+    <div id="profileArea" class="profile-area"></div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <span class="tag">Documentação</span>
+      <h1>Fundamentação do projeto</h1>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Heurísticas de Nielsen</h3>
+          <p>Feedback visual, controle do usuário, consistência e prevenção de erros.</p>
+        </article>
+        <article class="card">
+          <h3>Lei de Fitts</h3>
+          <p>Botões grandes e próximos das áreas de interação principais.</p>
+        </article>
+        <article class="card">
+          <h3>Limiar de Doherty</h3>
+          <p>Interações rápidas com respostas visuais imediatas.</p>
+        </article>
+        <article class="card">
+          <h3>Personas</h3>
+          <p>Estudantes, trabalhadores e usuários com necessidade de acessibilidade.</p>
+        </article>
+        <article class="card">
+          <h3>Offline-first</h3>
+          <p>Favoritos salvos localmente para uso posterior.</p>
+        </article>
+        <article class="card">
+          <h3>Service Blueprint</h3>
+          <p>Usuário pesquisa, sistema responde, dados simulados são lidos no navegador.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p><strong>Criadores:</strong> Luiz Enrique Silva dos Santos, Kayk Ferreira Candido e Matheus Inacio da Silva</p>
+    <p>Projeto acadêmico de UX/UI inspirado em aplicativos de mobilidade urbana.</p>
+  </footer>
+
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

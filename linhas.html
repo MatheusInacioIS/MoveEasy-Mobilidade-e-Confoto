@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linhas | MOVEASY</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo-moveasy.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="index.html">MOVEASY</a>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="linhas.html">Linhas</a>
+      <a href="mapa-real.html">Mapa</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="sobre.html">Projeto</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+    <div id="profileArea" class="profile-area"></div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <span class="tag">Linhas e rotas</span>
+          <h1>Consulte transporte público</h1>
+          <p>Pesquise, veja detalhes da rota e favorite as linhas mais usadas.</p>
+        </div>
+      </div>
+
+      <div class="search-panel">
+        <input id="searchInput" oninput="renderLines()" placeholder="Pesquisar por número, bairro, metrô ou terminal">
+        <select id="typeFilter" onchange="renderLines()">
+          <option value="todos">Todos</option>
+          <option value="Ônibus">Ônibus</option>
+          <option value="Metrô">Metrô</option>
+        </select>
+      </div>
+
+      <div id="linesContainer" class="line-container"></div>
+    </section>
+
+    <div id="routeModal" class="modal">
+      <div class="modal-box route-modal">
+        <button class="close" onclick="closeRoute()">×</button>
+        <div id="routeContent"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p><strong>Criadores:</strong> Luiz Enrique Silva dos Santos, Kayk Ferreira Candido e Matheus Inacio da Silva</p>
+    <p>Projeto acadêmico de UX/UI inspirado em aplicativos de mobilidade urbana.</p>
+  </footer>
+
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

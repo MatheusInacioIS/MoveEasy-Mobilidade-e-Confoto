@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil | MOVEASY</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo-moveasy.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="index.html">MOVEASY</a>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="linhas.html">Linhas</a>
+      <a href="mapa-real.html">Mapa</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="sobre.html">Projeto</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+    <div id="profileArea" class="profile-area"></div>
+  </header>
+
+
+  <main>
+    <section class="section">
+      <span class="tag">Minha conta</span>
+      <h1>Perfil do Usuário</h1>
+      <p>Gerencie sua conta, preferências de acessibilidade e dados salvos no navegador.</p>
+
+      <div class="profile-layout">
+        <aside class="profile-card-big" id="profileDetails"></aside>
+
+        <div class="profile-settings">
+          <article class="card">
+            <h3>Editar informações</h3>
+            <label>Nome de exibição</label>
+            <input id="profileNameInput" placeholder="Digite seu nome">
+            <label>E-mail</label>
+            <input id="profileEmailInput" placeholder="Digite seu e-mail">
+
+            <label>URL da foto de perfil</label>
+            <input id="profilePhotoInput" placeholder="Cole o link de uma imagem">
+
+            <label>Ou envie uma imagem</label>
+            <div class="custom-file-upload">
+              <input id="profilePhotoFile" type="file" accept="image/*" onchange="previewProfilePhoto(event)">
+              <label for="profilePhotoFile" class="file-button">📷 Escolher imagem</label>
+              <span id="fileNamePreview">Nenhuma imagem selecionada</span>
+            </div>
+            <p class="preview-note">Você pode colar uma URL ou enviar uma imagem do seu computador.</p>
+
+            <button class="btn full" onclick="saveProfileChanges()">Salvar alterações</button>
+          </article>
+
+          <article class="card">
+            <h3>Preferências</h3>
+            <div class="access-panel left-panel">
+              <button class="btn" onclick="toggleTheme()" id="themeButton">Modo Claro</button>
+              <button class="btn btn-dark" onclick="increaseFont()">Aumentar fonte</button>
+              <button class="btn btn-dark" onclick="decreaseFont()">Diminuir fonte</button>
+              <button class="btn btn-dark" onclick="resetFont()">Fonte padrão</button>
+            </div>
+          </article>
+
+          <article class="card danger-card">
+            <h3>Sessão</h3>
+            <p>Você pode sair da conta atual e entrar com outra conta na página de login.</p>
+            <button class="btn danger-btn full" onclick="logout()">Sair da conta</button>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <p><strong>Criadores:</strong> Luiz Enrique Silva dos Santos, Kayk Ferreira Candido e Matheus Inacio da Silva</p>
+    <p>Projeto acadêmico de UX/UI inspirado em aplicativos de mobilidade urbana.</p>
+  </footer>
+
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

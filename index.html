@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | MOVEASY</title>
+  <link rel="icon" type="image/svg+xml" href="img/logo-moveasy.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="index.html">MOVEASY</a>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="linhas.html">Linhas</a>
+      <a href="mapa-real.html">Mapa</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="sobre.html">Projeto</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+    <div id="profileArea" class="profile-area"></div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-card">
+        <span class="tag">Mobilidade urbana inteligente</span>
+        <h1>Planeje seu caminho sem confusão.</h1>
+        <p>Consulte ônibus, rotas, favoritos, mapa simulado e recursos de acessibilidade em uma experiência inspirada no
+          Moovit.</p>
+        <div class="hero-actions">
+          <a class="btn" href="linhas.html">Explorar Linhas</a>
+          <a class="btn btn-dark" href="mapa-real.html">Abrir Mapa</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Recursos principais</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Linhas em tempo real</h3>
+          <p>Previsões simuladas, status de rota e paradas detalhadas.</p>
+        </article>
+        <article class="card">
+          <h3>Favoritos inteligentes</h3>
+          <p>Favorite e desfavorite linhas com atualização automática.</p>
+        </article>
+        <article class="card">
+          <h3>Acessibilidade</h3>
+          <p>VLibras, modo claro/escuro persistente e controle de fonte.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p><strong>Criadores:</strong> Luiz Enrique Silva dos Santos, Kayk Ferreira Candido e Matheus Inacio da Silva</p>
+    <p>Projeto acadêmico de UX/UI inspirado em aplicativos de mobilidade urbana.</p>
+  </footer>
+
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
